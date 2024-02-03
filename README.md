@@ -1,8 +1,8 @@
-# React + Vite
+# 3D Robot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Webpage which displays a 3D robot hovering over a planet in space.
 
-Currently, two official plugins are available:
+This is a bit fun I made off the back of deciding to do some learning around threejs and 3d models.
+I developed the robot model myself in blender using blender kit's https://www.blenderkit.com/asset-gallery-detail/4cecc615-0b7c-437c-9368-c5fac59bc45d/ as a base to build off.
+I used resources including https://www.youtube.com/@javascriptmastery to learn about threejs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
