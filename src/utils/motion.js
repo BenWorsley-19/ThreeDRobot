@@ -1,21 +1,3 @@
-export const textVariant = (delay) => {
-    return {
-      hidden: {
-        y: -50,
-        opacity: 0,
-      },
-      show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1.25,
-          delay: delay,
-        },
-      },
-    };
-  };
-  
   export const fadeIn = (direction, type, delay, duration) => {
     return {
       hidden: {
@@ -29,25 +11,6 @@ export const textVariant = (delay) => {
         opacity: 1,
         transition: {
           type: type,
-          delay: delay,
-          duration: duration,
-          ease: "easeOut",
-        },
-      },
-    };
-  };
-  
-  export const zoomIn = (delay, duration) => {
-    return {
-      hidden: {
-        scale: 0,
-        opacity: 0,
-      },
-      show: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-          type: "tween",
           delay: delay,
           duration: duration,
           ease: "easeOut",
