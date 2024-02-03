@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
@@ -30,21 +30,7 @@ const Robot = ({ isMobile }) => {
   );
 };
 
-const RobotCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  // changes the isMobile state based on the window size
-  useEffect(() => {
-      const mediaQuery = window.matchMedia('(max-width: 500px)');
-      setIsMobile(mediaQuery.matches); 
-      const handleMediaQueryChange = (event) => {
-        setIsMobile(event.matches);
-      };
-      mediaQuery.addEventListener('change', handleMediaQueryChange);
-      return () => {
-        mediaQuery.removeEventListener('change', handleMediaQueryChange);
-      }
-  }, [])  
+const RobotCanvas = ({ isMobile }) => {
 
   return (
     <Canvas 
@@ -58,7 +44,6 @@ const RobotCanvas = () => {
         far: 200,
         position: [20, 3, 6],
       }}
-      // camera={{ position: [20, 3, 5], fov: 25 }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 

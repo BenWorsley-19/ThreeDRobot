@@ -1,7 +1,7 @@
-import { RobotCanvas, StarsCanvas, EarthCanvas } from './canvas';
+import { StarsCanvas } from './canvas';
+import Hero from './Hero';
 
 export {
-  RobotCanvas, 
-  StarsCanvas,
-  EarthCanvas
+  Hero,
+  StarsCanvas
 }
